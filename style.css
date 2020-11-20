@@ -1,0 +1,37 @@
+.header-row {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+li {
+    list-style: none;
+}
+li a {
+    text-decoration: none;
+}
+.ri-heart-line {
+   flex-basis: 10%;
+   padding-inline-start: 1rem;
+   color: yellow;
+}
+
+.title-and-writer {
+    flex-basis: 20%;
+}
+
+.song-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #272343;
+    margin: 1rem;
+    border-radius: 6px;
+}
+
+.ri-arrow-up-line,
+.ri-arrow-down-line,
+.ri-shopping-cart-2-line,
+.ri-more-line {
+    flex-basis: 15%;
+    color: white;
+}
