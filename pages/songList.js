@@ -6,6 +6,8 @@ export default [
         songWriters: 'Chad Mattson',
         upVote: 0,
         downVote: 0,
+        release_date: '2005',
+        isFavorite: false
     },
     {
         id: '2',
@@ -14,6 +16,8 @@ export default [
         songWriters: 'ZouZou',
         upVote: 0,
         downVote: 0,
+        release_date: '1990',
+        isFavorite: false
     },
     {
         id: '3',
@@ -22,5 +26,7 @@ export default [
         songWriters: 'Vitaa & Slimane',
         upVote: 0,
         downVote: 0,
+        release_date: '2000',
+        isFavorite: false
     }
 ]

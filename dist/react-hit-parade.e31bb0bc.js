@@ -33866,21 +33866,27 @@ var _default = [{
   lyrics: 'I work so hard, tryna open every door, Search near and far, turning over every stone I close my eyes, instead I find no rest, No rest for a restless heart. All I have been chasing, putting my faith in. Let it fade, let it break into pieces. Just give me Jesus (Jesus). Just give me Jesus (Jesus), There is nothing I desire (I desire). That cannot be found in You (found in You). You are everything that I have ever needed. Just give me Jesus (oh-ohh, oh-oh-ohhh).Take all my pride, my dreams, my plans. This house I have built, on troubled sand. If I gained the world, it would never be, It could never be enough. Just give me Jesus (Jesus). Just give me Jesus (Jesus). There is nothing I desire (I desire). That cannot be found in You (found in You). You are everything that I have ever needed. Just give me Jesus (Jesus). Oh, just give me Jesus (Jesus). All of my searching, trying to be perfect. All the fears, all the lies I believed in All I have been chasing, putting my faith in Let it fade, let it fall into pieces Yeah-yeahh! And just give me Jesus You are life, You are hope Just give me Jesus, You are love, You are all that I want, There is nothing I desire (I desire). That cannot be found in You (found in You). You are everything that I have ever needed. Just give me Jesus (Jesus),Just give me Jesus (Jesus). There is nothing I desire (I desire). That cannot be found in You (found in You). You are everything that I have ever needed. Just give me Jesus,Just give me Jesus',
   songWriters: 'Chad Mattson',
   upVote: 0,
-  downVote: 0
+  downVote: 0,
+  release_date: '2005',
+  isFavorite: false
 }, {
   id: '2',
   title: 'Dada sy Neny',
   lyrics: 'Iza no tiako i dada sy neny Fanontaniana tsy valiko ireny Fantatro fa tsisy tombo sy hala i neny no tiako fa i dada malala. Tiako avokoa ary tiako tokoa. Tsy mba avy eo imolotra fa avy ao am-po. Tsy misy mahasolo ny vitan ny neny. Kanefa tsy feno raha tsy eo i dada  Ref: Anisan ny olona tena tsy foiko i neny. I dada ihany koa efa olona tiako hatrizay. Ny ahy ny angatahako hananan ireo tombon andro. Mba ho ela velona ireo nahitako masoandro.  (2x) Endrey ireto izy efa osa tokoa Ny volony fotsy, efa sola ny loha Indrisy nilaozany ny hatanorany Izany tokoa no fiainana an-tany. Izaho aza mba efa an-taonany maro. Fa misy kamboty amam-bolana ihany. Mba mibadabada vao miana-miteny. Lahatra tsy hiodivirana ireny',
   songWriters: 'ZouZou',
   upVote: 0,
-  downVote: 0
+  downVote: 0,
+  release_date: '1990',
+  isFavorite: false
 }, {
   id: '3',
   title: 'Before You',
   lyrics: 'There were no pictures, there were no colors. There was no story, my soul mate. There were no parties, I was not in the mood for anything. No smile, my soul mate. You know, the world did not run smoothly. I had the words but not the song. You know love, you know passion. Yes, it is meant to be, it was said. Yes, that is life.   [Chorus]    Before you. I had nothing. Before you. I was not shown the way. I know God does not blame me. For laying eyes on you. Before you, I was not shown the way. There were no houses, there was no happiness, I had no reason, my soul mate. There was no laughter, but there was no crying. I was alone here, my soul mate. You know, the world did not run smoothly. I had the words but not the song, You know love in any ways, Yes, it is meant to be, it was said. Yes, that is life.',
   songWriters: 'Vitaa & Slimane',
   upVote: 0,
-  downVote: 0
+  downVote: 0,
+  release_date: '2000',
+  isFavorite: false
 }];
 exports.default = _default;
 },{}],"songContext.js":[function(require,module,exports) {
@@ -33902,6 +33908,20 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -33920,48 +33940,88 @@ exports.Context = Context;
 
 function ContextProvider(_ref) {
   var children = _ref.children;
-  var songs = _songList.default;
 
-  var _useState = (0, _react.useState)(0),
+  var _useState = (0, _react.useState)([]),
       _useState2 = _slicedToArray(_useState, 2),
-      upVote = _useState2[0],
-      setUpVote = _useState2[1];
+      songs = _useState2[0],
+      setSongs = _useState2[1];
 
   var _useState3 = (0, _react.useState)(0),
       _useState4 = _slicedToArray(_useState3, 2),
-      downVote = _useState4[0],
-      setDownVote = _useState4[1];
+      upVote = _useState4[0],
+      setUpVote = _useState4[1];
 
-  function handleUpVote(id) {
-    var voteForUp = songs.find(function (song) {
-      return song.id == id;
-    });
-    var addedScore = voteForUp.upVote++;
-    setUpVote(addedScore);
-  }
+  var _useState5 = (0, _react.useState)(0),
+      _useState6 = _slicedToArray(_useState5, 2),
+      downVote = _useState6[0],
+      setDownVote = _useState6[1];
 
-  function handleDownVote(id) {
-    var voteForDown = songs.find(function (song) {
-      return song.id == id;
-    });
-    var votedScore = voteForDown.upVote++;
-    setDownVote(votedScore);
-  }
+  var _useState7 = (0, _react.useState)([]),
+      _useState8 = _slicedToArray(_useState7, 2),
+      cartItem = _useState8[0],
+      setCartItem = _useState8[1];
 
   (0, _react.useEffect)(function () {
-    handleUpVote();
-    handleDownVote();
+    setSongs(_songList.default);
   }, []);
+
+  function updateUpVote(id) {
+    var increaseVote = songs.find(function (data) {
+      return data.id == id;
+    });
+    var voted = increaseVote.upVote++;
+    setUpVote(voted);
+  }
+
+  function updateDownVote(id) {
+    var decreaseVote = songs.find(function (data) {
+      return data.id == id;
+    });
+    var votedSong = decreaseVote.downVote++;
+    setDownVote(votedSong);
+  }
+
+  function toggleFavorite(id) {
+    console.log(id);
+    var chooseFavorite = songs.map(function (song) {
+      if (song.id === id) {
+        console.log(id);
+        return _objectSpread(_objectSpread({}, song), {}, {
+          isFavorite: !song.isFavorite
+        });
+      }
+
+      return song;
+    });
+    setSongs(chooseFavorite);
+  }
+
+  function addToCart(song) {
+    setCartItem(function (prevItem) {
+      return [].concat(_toConsumableArray(prevItem), [song]);
+    });
+  }
+
+  function removeSong(id) {
+    var removeImg = songs.filter(function (cartItem) {
+      return cartItem.id !== id;
+    });
+    console.log(removeImg);
+    setSongs(removeImg); // setCartItem(prevItems => prevItems.filter(item => item.id !== id))
+  }
+
   return /*#__PURE__*/_react.default.createElement(Context.Provider, {
     value: {
-      upVote: upVote,
-      downVote: downVote,
-      handleUpVote: handleUpVote,
-      handleDownVote: handleDownVote
+      songs: songs,
+      removeSong: removeSong,
+      updateUpVote: updateUpVote,
+      updateDownVote: updateDownVote,
+      toggleFavorite: toggleFavorite,
+      addToCart: addToCart
     }
   }, children);
 }
-},{"react":"node_modules/react/index.js","./pages/songList":"pages/songList.js"}],"component/Song.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./pages/songList":"pages/songList.js"}],"component/PopularSong.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33971,9 +34031,156 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _songContext = require("../songContext");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function PopularSong() {
+  var _useContext = (0, _react.useContext)(_songContext.Context),
+      songs = _useContext.songs;
+
+  var popularSongs = songs.map(function (song) {
+    return song.release_date > 2000 ? /*#__PURE__*/_react.default.createElement("div", {
+      key: song.id,
+      className: "song-cards"
+    }, /*#__PURE__*/_react.default.createElement("h3", null, song.title), /*#__PURE__*/_react.default.createElement("p", null, song.lyrics), /*#__PURE__*/_react.default.createElement("p", null, song.release_date)) : '';
+  });
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "song-and-lyrics"
+  }, popularSongs);
+}
+
+var _default = PopularSong;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../songContext":"songContext.js"}],"component/Song.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
 var _songList = _interopRequireDefault(require("../pages/songList"));
 
+var _reactRouterDom = require("react-router-dom");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Song() {
+  var _useParams = (0, _reactRouterDom.useParams)(),
+      id = _useParams.id;
+
+  var songLyrics = _songList.default.find(function (lyrics) {
+    return lyrics.id === id;
+  });
+
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "lyrics-container"
+  }, /*#__PURE__*/_react.default.createElement("h3", null, songLyrics.title), /*#__PURE__*/_react.default.createElement("p", null, songLyrics.lyrics));
+}
+
+var _default = Song;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../pages/songList":"pages/songList.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"pages/Home.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
 var _songContext = require("../songContext");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function Home(_ref) {
+  var song = _ref.song;
+  console.log(song);
+
+  var _useContext = (0, _react.useContext)(_songContext.Context),
+      removeSong = _useContext.removeSong,
+      updateUpVote = _useContext.updateUpVote,
+      updateDownVote = _useContext.updateDownVote,
+      toggleFavorite = _useContext.toggleFavorite,
+      addToCart = _useContext.addToCart;
+
+  function heartIcon() {
+    if (song.isFavorite) {
+      return /*#__PURE__*/_react.default.createElement("i", {
+        onClick: function onClick() {
+          return toggleFavorite(song.id);
+        },
+        className: "ri-heart-fill favorite"
+      });
+    } else {
+      return /*#__PURE__*/_react.default.createElement("i", {
+        onClick: function onClick() {
+          return toggleFavorite(song.id);
+        },
+        className: "ri-heart-line"
+      });
+    }
+  }
+
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "song-container"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    key: song.id,
+    className: "song-card"
+  }, heartIcon(), /*#__PURE__*/_react.default.createElement("div", {
+    className: "title-and-writer"
+  }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/song/".concat(song.id)
+  }, /*#__PURE__*/_react.default.createElement("h3", null, song.title)), /*#__PURE__*/_react.default.createElement("p", null, song.songWriters)), /*#__PURE__*/_react.default.createElement("i", {
+    onClick: function onClick() {
+      return updateUpVote(song.id);
+    },
+    className: "ri-arrow-up-line"
+  }, song.upVote), /*#__PURE__*/_react.default.createElement("i", {
+    onClick: function onClick() {
+      return updateDownVote(song.id);
+    },
+    className: "ri-arrow-down-line"
+  }, song.downVote), /*#__PURE__*/_react.default.createElement("i", {
+    onClick: function onClick() {
+      return addToCart(song);
+    },
+    className: "ri-shopping-cart-2-line"
+  }), /*#__PURE__*/_react.default.createElement("i", {
+    className: "ri-more-line"
+  }), /*#__PURE__*/_react.default.createElement("i", {
+    onClick: function onClick() {
+      return removeSong(song.id);
+    },
+    className: "ri-delete-bin-line"
+  })));
+}
+
+var _default = Home;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../songContext":"songContext.js"}],"pages/SongLib.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _songContext = require("../songContext");
+
+var _Home = _interopRequireDefault(require("./Home"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33981,42 +34188,24 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function Song() {
+function SongLib() {
   var _useContext = (0, _react.useContext)(_songContext.Context),
-      upVote = _useContext.upVote,
-      downVote = _useContext.downVote,
-      handleUpVote = _useContext.handleUpVote,
-      handleDownVote = _useContext.handleDownVote;
+      songs = _useContext.songs;
 
-  var songs = _songList.default.map(function (song) {
-    return /*#__PURE__*/_react.default.createElement("div", {
+  var sortedSongs = songs.sort(function (a, b) {
+    return b.release_date - a.release_date;
+  }).map(function (song) {
+    return /*#__PURE__*/_react.default.createElement(_Home.default, {
       key: song.id,
-      className: "song-card"
-    }, /*#__PURE__*/_react.default.createElement("i", {
-      className: "ri-heart-line"
-    }), /*#__PURE__*/_react.default.createElement("div", {
-      className: "title-and-writer"
-    }, /*#__PURE__*/_react.default.createElement("h3", null, song.title), /*#__PURE__*/_react.default.createElement("p", null, song.songWriters)), /*#__PURE__*/_react.default.createElement("i", {
-      onClick: handleUpVote,
-      className: "ri-arrow-up-line"
-    }, upVote), /*#__PURE__*/_react.default.createElement("i", {
-      onClick: handleDownVote,
-      className: "ri-arrow-down-line"
-    }, downVote), /*#__PURE__*/_react.default.createElement("i", {
-      className: "ri-shopping-cart-2-line"
-    }), /*#__PURE__*/_react.default.createElement("i", {
-      className: "ri-more-line"
-    }));
+      song: song
+    });
   });
-
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "song-container"
-  }, songs);
+  return /*#__PURE__*/_react.default.createElement("div", null, sortedSongs);
 }
 
-var _default = Song;
+var _default = SongLib;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../pages/songList":"pages/songList.js","../songContext":"songContext.js"}],"pages/Header.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../songContext":"songContext.js","./Home":"pages/Home.js"}],"pages/Header.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34028,15 +34217,23 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
+var _PopularSong = _interopRequireDefault(require("../component/PopularSong"));
+
 var _Song = _interopRequireDefault(require("../component/Song"));
+
+var _Home = _interopRequireDefault(require("./Home"));
+
+var _SongLib = _interopRequireDefault(require("./SongLib"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Header() {
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, " Hit Parade"), /*#__PURE__*/_react.default.createElement("nav", null, /*#__PURE__*/_react.default.createElement("ul", {
     className: "header-row"
-  }, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  }, "`", /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/"
+  }, "Home")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/song"
   }, "\uD83D\uDD25Popular songs")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/styles"
   }, "\uD83D\uDC97Styles")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
@@ -34046,6 +34243,12 @@ function Header() {
   }, "\uD83D\uDED2Cart")))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/"
+  }, /*#__PURE__*/_react.default.createElement(_SongLib.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    exact: true,
+    path: "/song"
+  }, /*#__PURE__*/_react.default.createElement(_PopularSong.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    exact: true,
+    path: "/song/:id"
   }, /*#__PURE__*/_react.default.createElement(_Song.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/styles"
@@ -34059,7 +34262,7 @@ function Header() {
 
 var _default = Header;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../component/Song":"component/Song.js"}],"App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../component/PopularSong":"component/PopularSong.js","../component/Song":"component/Song.js","./Home":"pages/Home.js","./SongLib":"pages/SongLib.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34125,7 +34328,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64916" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57846" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

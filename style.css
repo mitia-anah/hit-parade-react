@@ -9,10 +9,11 @@ li {
 li a {
     text-decoration: none;
 }
-.ri-heart-line {
+.ri-heart-line, .favorite {
    flex-basis: 10%;
    padding-inline-start: 1rem;
    color: yellow;
+   cursor: pointer;
 }
 
 .title-and-writer {
@@ -34,4 +35,18 @@ li a {
 .ri-more-line {
     flex-basis: 15%;
     color: white;
+    cursor: pointer;
+}
+ 
+p,h1,h2, h3, h4 {
+    color: white;
+}
+
+.song-and-lyrics ,
+.lyrics-container {
+    max-width: 500px;
+    padding: 2rem;
+    margin: 5rem auto;
+    border-radius: 10px;
+    background-color: #172c66;
 }
