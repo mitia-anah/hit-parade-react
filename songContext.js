@@ -40,8 +40,13 @@ function ContextProvider({ children }) {
         setSongs(chooseFavorite)
     }
 
+
     function addToCart(song) {
         setCartItem(prevItem => [...prevItem, song])
+    }
+
+    function moreButton(id) {
+        setCartItem(prevItem => [...prevItem, id])
     }
     function removeSong(id) {
         const removeImg = songs.filter(cartItem => cartItem.id !== id)
@@ -53,10 +58,12 @@ function ContextProvider({ children }) {
     return (
         <Context.Provider value={{
             songs,
+            cartItem,
             removeSong,
             updateUpVote,
             updateDownVote,
             toggleFavorite,
+            moreButton,
             addToCart,
         }}>
             {children}

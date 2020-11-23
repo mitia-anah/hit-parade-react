@@ -8,7 +8,7 @@ Each screen here represents a route. Take some time to decide how the data struc
 Routes  : 
 
 - / : Hit parade route, where you’re showing a list of songs, sorted by their popularity. You can inscrease or decrease the votes by clicking the icons. You can also favorite a song by clicking the heart icon. There is also a possibility to add a song to the cart. If you click on the three dots, you’ll be redirected to the song’s page, with the lyrics.
-
+    
 - /styles : It’s a page that shows the list of possible styles a song can have. Those styles of music are hardcoded, you don’t need to generate them dynamically.
 
 - /styles/:styleName : it’s a page that lists all the songs from a specific style. If you click on a song, it will take you to the specific song page.

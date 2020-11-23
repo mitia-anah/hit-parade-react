@@ -33889,7 +33889,38 @@ var _default = [{
   isFavorite: false
 }];
 exports.default = _default;
-},{}],"songContext.js":[function(require,module,exports) {
+},{}],"component/Song.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _songList = _interopRequireDefault(require("../pages/songList"));
+
+var _reactRouterDom = require("react-router-dom");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Song() {
+  var _useParams = (0, _reactRouterDom.useParams)(),
+      id = _useParams.id;
+
+  var songLyrics = _songList.default.find(function (lyrics) {
+    return lyrics.id === id;
+  });
+
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "lyrics-container"
+  }, /*#__PURE__*/_react.default.createElement("h3", null, songLyrics.title), /*#__PURE__*/_react.default.createElement("p", null, songLyrics.lyrics));
+}
+
+var _default = Song;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../pages/songList":"pages/songList.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"songContext.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34002,6 +34033,12 @@ function ContextProvider(_ref) {
     });
   }
 
+  function moreButton(id) {
+    setCartItem(function (prevItem) {
+      return [].concat(_toConsumableArray(prevItem), [id]);
+    });
+  }
+
   function removeSong(id) {
     var removeImg = songs.filter(function (cartItem) {
       return cartItem.id !== id;
@@ -34013,79 +34050,17 @@ function ContextProvider(_ref) {
   return /*#__PURE__*/_react.default.createElement(Context.Provider, {
     value: {
       songs: songs,
+      cartItem: cartItem,
       removeSong: removeSong,
       updateUpVote: updateUpVote,
       updateDownVote: updateDownVote,
       toggleFavorite: toggleFavorite,
+      moreButton: moreButton,
       addToCart: addToCart
     }
   }, children);
 }
-},{"react":"node_modules/react/index.js","./pages/songList":"pages/songList.js"}],"component/PopularSong.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireWildcard(require("react"));
-
-var _songContext = require("../songContext");
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function PopularSong() {
-  var _useContext = (0, _react.useContext)(_songContext.Context),
-      songs = _useContext.songs;
-
-  var popularSongs = songs.map(function (song) {
-    return song.release_date > 2000 ? /*#__PURE__*/_react.default.createElement("div", {
-      key: song.id,
-      className: "song-cards"
-    }, /*#__PURE__*/_react.default.createElement("h3", null, song.title), /*#__PURE__*/_react.default.createElement("p", null, song.lyrics), /*#__PURE__*/_react.default.createElement("p", null, song.release_date)) : '';
-  });
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "song-and-lyrics"
-  }, popularSongs);
-}
-
-var _default = PopularSong;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","../songContext":"songContext.js"}],"component/Song.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _songList = _interopRequireDefault(require("../pages/songList"));
-
-var _reactRouterDom = require("react-router-dom");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function Song() {
-  var _useParams = (0, _reactRouterDom.useParams)(),
-      id = _useParams.id;
-
-  var songLyrics = _songList.default.find(function (lyrics) {
-    return lyrics.id === id;
-  });
-
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "lyrics-container"
-  }, /*#__PURE__*/_react.default.createElement("h3", null, songLyrics.title), /*#__PURE__*/_react.default.createElement("p", null, songLyrics.lyrics));
-}
-
-var _default = Song;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","../pages/songList":"pages/songList.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"pages/Home.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./pages/songList":"pages/songList.js"}],"pages/Home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34112,6 +34087,8 @@ function Home(_ref) {
       updateUpVote = _useContext.updateUpVote,
       updateDownVote = _useContext.updateDownVote,
       toggleFavorite = _useContext.toggleFavorite,
+      moreButton = _useContext.moreButton,
+      cartItem = _useContext.cartItem,
       addToCart = _useContext.addToCart;
 
   function heartIcon() {
@@ -34132,16 +34109,33 @@ function Home(_ref) {
     }
   }
 
+  function cartIcon() {
+    if (cartItem.some(function (cart) {
+      return cart.id === song.id;
+    })) {
+      return /*#__PURE__*/_react.default.createElement("i", {
+        onClick: function onClick() {
+          return addToCart(song);
+        },
+        className: "ri-shopping-cart-2-line"
+      });
+    } else {
+      return /*#__PURE__*/_react.default.createElement("i", {
+        onClick: function onClick() {
+          return addToCart(song);
+        },
+        className: "ri-shopping-cart-2-line"
+      });
+    }
+  }
+
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "song-container"
   }, /*#__PURE__*/_react.default.createElement("div", {
-    key: song.id,
     className: "song-card"
   }, heartIcon(), /*#__PURE__*/_react.default.createElement("div", {
     className: "title-and-writer"
-  }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/song/".concat(song.id)
-  }, /*#__PURE__*/_react.default.createElement("h3", null, song.title)), /*#__PURE__*/_react.default.createElement("p", null, song.songWriters)), /*#__PURE__*/_react.default.createElement("i", {
+  }, /*#__PURE__*/_react.default.createElement("h3", null, song.title), /*#__PURE__*/_react.default.createElement("p", null, song.songWriters)), /*#__PURE__*/_react.default.createElement("i", {
     onClick: function onClick() {
       return updateUpVote(song.id);
     },
@@ -34151,12 +34145,10 @@ function Home(_ref) {
       return updateDownVote(song.id);
     },
     className: "ri-arrow-down-line"
-  }, song.downVote), /*#__PURE__*/_react.default.createElement("i", {
+  }, song.downVote), cartIcon(), /*#__PURE__*/_react.default.createElement("i", {
     onClick: function onClick() {
-      return addToCart(song);
+      return moreButton(song.id);
     },
-    className: "ri-shopping-cart-2-line"
-  }), /*#__PURE__*/_react.default.createElement("i", {
     className: "ri-more-line"
   }), /*#__PURE__*/_react.default.createElement("i", {
     onClick: function onClick() {
@@ -34217,8 +34209,6 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var _PopularSong = _interopRequireDefault(require("../component/PopularSong"));
-
 var _Song = _interopRequireDefault(require("../component/Song"));
 
 var _Home = _interopRequireDefault(require("./Home"));
@@ -34227,13 +34217,12 @@ var _SongLib = _interopRequireDefault(require("./SongLib"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import PopularSong from '../component/PopularSong'
 function Header() {
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, " Hit Parade"), /*#__PURE__*/_react.default.createElement("nav", null, /*#__PURE__*/_react.default.createElement("ul", {
     className: "header-row"
   }, "`", /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/"
-  }, "Home")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/song"
   }, "\uD83D\uDD25Popular songs")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/styles"
   }, "\uD83D\uDC97Styles")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
@@ -34246,7 +34235,7 @@ function Header() {
   }, /*#__PURE__*/_react.default.createElement(_SongLib.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/song"
-  }, /*#__PURE__*/_react.default.createElement(_PopularSong.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+  }, /*#__PURE__*/_react.default.createElement(_Home.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/song/:id"
   }, /*#__PURE__*/_react.default.createElement(_Song.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
@@ -34262,7 +34251,7 @@ function Header() {
 
 var _default = Header;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../component/PopularSong":"component/PopularSong.js","../component/Song":"component/Song.js","./Home":"pages/Home.js","./SongLib":"pages/SongLib.js"}],"App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../component/Song":"component/Song.js","./Home":"pages/Home.js","./SongLib":"pages/SongLib.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34328,7 +34317,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57846" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61343" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

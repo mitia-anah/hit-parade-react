@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, Switch, Route } from 'react-router-dom'
-import PopularSong from '../component/PopularSong'
+// import PopularSong from '../component/PopularSong'
 import Song from '../component/Song'
 import Home from './Home'
 import SongLib from './SongLib'
@@ -11,8 +11,8 @@ function Header() {
             <h1> Hit Parade</h1>
             <nav>
                 <ul className="header-row">`
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/song'>🔥Popular songs</Link></li>
+                    <li><Link to='/'>🔥Popular songs</Link></li>
+                    {/* <li><Link to='/song'></Link></li> */}
                     <li><Link to='/styles'>💗Styles</Link></li>
                     <li><Link to='/add'>🙄Add</Link></li>
                     <li><Link to='/cart'>🛒Cart</Link></li>
@@ -23,7 +23,7 @@ function Header() {
                     <SongLib />
                 </Route>
                 <Route exact path="/song">
-                    <PopularSong />
+                    <Home />
                 </Route>
                 <Route exact path="/song/:id">
                     <Song />
